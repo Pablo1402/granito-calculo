@@ -4,6 +4,7 @@ using System.Net;
 
 namespace WebApi.Controllers
 {
+    [Route("api/[controller]")]
     public class CodeController : ControllerBase
     {
         [HttpGet]
