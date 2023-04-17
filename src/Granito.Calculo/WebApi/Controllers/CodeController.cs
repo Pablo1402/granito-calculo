@@ -10,7 +10,7 @@ namespace WebApi.Controllers
         [HttpGet]
         [Route("show-me-the-code")]
         [ProducesResponseType((int)HttpStatusCode.OK, Type = typeof(ShowCodeDto))]
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> BuscarGitCode()
         {
             return Ok(new ShowCodeDto()
             {

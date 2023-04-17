@@ -19,9 +19,10 @@ namespace WebApi.Controllers
         [HttpPost]
         [Route("calcula-juros")]
         [ProducesResponseType((int)HttpStatusCode.OK, Type = typeof(CalculoResponseDto))]
-        public async Task<IActionResult> Index([FromBody] CalculaJurosCommand command)
+        public async Task<IActionResult> CalcularJuros([FromBody] CalculaJurosCommand command)
         {
-            return Ok(await _mediator.Send(command));
+            var retorno = await _mediator.Send(command);
+            return Ok(retorno);
         }
     }
 }
